@@ -1,5 +1,7 @@
 # Projeto E-commerce
 
+### Autor: Matheus Fernandes Gomes
+
 ## Banco de dados
 
 ![Modelo de banco de dados](./assets/image/banco.jpg "Modelo de banco de dados escrito na 3ª Forma Normal - 3FN")
