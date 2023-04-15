@@ -4,10 +4,7 @@ import br.senac.go.domain.Pessoa;
 import br.senac.go.generics.GenericOperationsResource;
 import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.logging.Level;
@@ -30,13 +27,18 @@ public class PessoaResource implements GenericOperationsResource<Pessoa,Integer>
         return entity;
     }
     @Override
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE,
+            MediaType.APPLICATION_XML_VALUE})
     public List<Pessoa> get() {
+
         return null;
     }
 
     @Override
-    public void put(Pessoa entity, Integer id) {
-
+    @PutMapping(value = "/{id}",consumes = {MediaType.APPLICATION_JSON_VALUE,
+            MediaType.APPLICATION_XML_VALUE})
+    public void put(@RequestBody @Validated Pessoa entity, @PathVariable("id") Integer id) {
+        LOGGER.log(Level.INFO, String.format("Exemplo do PUT: %s | %d", entity, id));
     }
 
     @Override
