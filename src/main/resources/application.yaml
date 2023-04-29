@@ -28,3 +28,11 @@ logging:
     br.senac.go: debug
     org.springframework.web: info
 
+resource:
+  pessoa-post: Método responsavel por criar uma nova pessoa.
+  pessoa-put: Método responsavel por atualizar todos os dados de uma pessoa.
+  pessoa-patch: Método responsavel por atualizar parte de um objeto pessoa.
+  pessoa-delete: Método responsavel por deletar o registro pessoa.
+  pessoa-delete-by-id: Método responsavel por deletar um registro por identificador.
+
+
