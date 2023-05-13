@@ -12,6 +12,6 @@ public class Pessoa extends BaseModel{
     private String nome;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
-    private List<Contato> contatoes;
+    private List<Contato> contatos;
 
 }
